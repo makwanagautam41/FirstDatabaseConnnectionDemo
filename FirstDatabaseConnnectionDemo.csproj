@@ -73,6 +73,8 @@
     <Content Include="App_Data\stud_info_db_log.ldf">
       <DependentUpon>stud_info_db.mdf</DependentUpon>
     </Content>
+    <Content Include="Display_products.aspx" />
+    <Content Include="LoginStudent.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -90,6 +92,20 @@
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Display_products.aspx.cs">
+      <DependentUpon>Display_products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Display_products.aspx.designer.cs">
+      <DependentUpon>Display_products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginStudent.aspx.cs">
+      <DependentUpon>LoginStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginStudent.aspx.designer.cs">
+      <DependentUpon>LoginStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">

@@ -14,27 +14,27 @@
                     <tr>
                         <td>Select Company</td>
                         <td>
-                            <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></td>
+                            <asp:DropDownList ID="DropDownList" runat="server" OnSelectedIndexChanged="DropDownList_SelectedIndexChanged"></asp:DropDownList></td>
                     </tr>
                     <tr>
                         <td>Product name</td>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+                            <asp:TextBox ID="txtpnm" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <td>Product Configuration</td>
                         <td>
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+                            <asp:TextBox ID="txtconfig" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <td>Product Image</td>
                         <td>
-                            <asp:FileUpload ID="FileUpload1" runat="server" /></td>
+                            <asp:FileUpload ID="FileUpload" runat="server" /></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <asp:Button ID="Button1" runat="server" Text="Button" /></td>
+                            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" /></td>
                     </tr>
                 </table>
             </center>

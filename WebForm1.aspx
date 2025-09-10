@@ -51,6 +51,11 @@
                             <asp:FileUpload ID="fuimg" runat="server" /></td>
                     </tr>
                     <tr>
+                        <td>Password:</td>
+                        <td>
+                            <asp:TextBox ID="txtpw" runat="server"></asp:TextBox></td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <asp:Button ID="save" runat="server" Text="Save" OnClick="save_Click" /></td>

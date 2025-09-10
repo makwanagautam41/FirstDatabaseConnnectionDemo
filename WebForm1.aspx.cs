@@ -65,7 +65,7 @@ namespace FirstDatabaseConnnectionDemo
             {
                 get_con();
                 img_upload();
-                cmd = new SqlCommand("INSERT INTO stud_tbl(Name,Gender,Email,City,Image)VALUES('" + txtnm.Text + "','" + genrbls.Text + "','" + txtem.Text + "','" + ctdrdls.Text + "','" + img_file_name + "')", con);
+                cmd = new SqlCommand("INSERT INTO stud_tbl(Name,Gender,Email,City,Image,Password)VALUES('" + txtnm.Text + "','" + genrbls.Text + "','" + txtem.Text + "','" + ctdrdls.Text + "','" + img_file_name + "','"+txtpw.Text+"')", con);
                 cmd.ExecuteNonQuery();
                 fill_grid();
                 clear();

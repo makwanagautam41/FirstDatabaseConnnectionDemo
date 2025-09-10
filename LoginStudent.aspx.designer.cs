@@ -11,7 +11,7 @@ namespace FirstDatabaseConnnectionDemo
 {
 
 
-    public partial class AddProduct
+    public partial class LoginStudent
     {
 
         /// <summary>
@@ -24,40 +24,22 @@ namespace FirstDatabaseConnnectionDemo
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// DropDownList control.
+        /// txtem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList;
+        protected global::System.Web.UI.WebControls.TextBox txtem;
 
         /// <summary>
-        /// txtpnm control.
+        /// txtpw control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpnm;
-
-        /// <summary>
-        /// txtconfig control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtconfig;
-
-        /// <summary>
-        /// FileUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
+        protected global::System.Web.UI.WebControls.TextBox txtpw;
 
         /// <summary>
         /// Button1 control.
