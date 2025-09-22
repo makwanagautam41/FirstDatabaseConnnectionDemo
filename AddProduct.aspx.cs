@@ -48,6 +48,7 @@ namespace FirstDatabaseConnnectionDemo
         {
             txtpnm.Text = "";
             txtconfig.Text = "";
+            txtprice.Text = "";
         }
 
         void fillCategory()
@@ -66,9 +67,11 @@ namespace FirstDatabaseConnnectionDemo
         {
             string prod_name = txtpnm.Text;
             string prod_config = txtconfig.Text;
+            int price = Convert.ToInt32(txtprice.Text);
             img_upload();
 
-            string query = "INSERT INTO product_tbl (prod_name,prod_config,prod_image,category_id)VALUES('" + prod_name + "','" + prod_config + "','" + img_file_name + "','" + ViewState["cid"] + "')";
+            string query = "INSERT INTO product_tbl (prod_name,prod_config,prod_image,category_id,price) " +
+                           "VALUES('" + prod_name + "','" + prod_config + "','" + img_file_name + "','" + ViewState["cid"] + "','" + price + "')";
             cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             clear();

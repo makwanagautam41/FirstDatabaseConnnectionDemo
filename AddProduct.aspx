@@ -27,6 +27,13 @@
                             <asp:TextBox ID="txtconfig" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
+                        <td>Product Price</td>
+                        <td>
+                            <asp:TextBox ID="txtprice" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+
+                    <tr>
                         <td>Product Image</td>
                         <td>
                             <asp:FileUpload ID="FileUpload" runat="server" /></td>
