@@ -29,6 +29,21 @@ namespace FirstDatabaseConnnectionDemo
                 getConnection();
                 fillDataList();
             }
+
+            if (Session["student"] != null && Session["student"].ToString() != "")
+            {
+                getConnection();
+                da = new SqlDataAdapter("SELECT * FROM stud_tbl WHERE Email='" + Session["student"] +"'", con);
+                ds = new DataSet();
+                da.Fill(ds);
+                int userId = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+                string name = ds.Tables[0].Rows[0][1].ToString();
+                lblName.Text = "Welcome " + name;
+            }
+            else
+            {
+                Response.Redirect("LoginStudent.aspx");
+            }
         }
 
         void getConnection()
@@ -57,11 +72,38 @@ namespace FirstDatabaseConnnectionDemo
 
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
+            getConnection();
             if(e.CommandName == "cmd_view")
             {
                 int id = Convert.ToInt32(e.CommandArgument);
                 Response.Redirect("View_Details.aspx?id=" + id);
             }
+            if(e.CommandName == "cmd_add")
+            {
+                da = new SqlDataAdapter("SELECT * FROM stud_tbl WHERE Email='" + Session["student"] + "'",con);
+                ds = new DataSet();
+                da.Fill(ds);
+                int userId = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+                int productId = Convert.ToInt32(e.CommandArgument);
+
+                da = new SqlDataAdapter("SELECT * FROM product_tbl WHERE Id='" + productId + "'", con);
+                ds = new DataSet();
+                da.Fill(ds);
+
+                string productName = ds.Tables[0].Rows[0][1].ToString();
+                string productPrice = ds.Tables[0].Rows[0][5].ToString();
+                string productImage = ds.Tables[0].Rows[0][3].ToString();
+                int quantity = 1;
+
+                cmd = new SqlCommand("INSERT INTO cart_tbl(Cart_user_id,Cart_prod_id,Cart_prod_name,Cart_prod_quantity,Cart_prod_price,Cart_prod_image)VALUES('"+userId+"','"+productId+"','"+productName+"','"+quantity+"','"+productPrice+"','"+productImage+"')", con);
+                cmd.ExecuteNonQuery();
+
+            }
+        }
+
+        protected void cmd_add(object sender, CommandEventArgs e)
+        {
+
         }
 
         void fillDataList()

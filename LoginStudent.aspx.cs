@@ -39,7 +39,7 @@ namespace FirstDatabaseConnnectionDemo
                 if (i > 0)
                 {
                     Session["student"] = txtem.Text;
-                    Response.Redirect("AddProduct.aspx");
+                    Response.Redirect("Display_products.aspx");
                 }
                 else
                 {

@@ -11,6 +11,7 @@
         <div>
             <center>
                 <h1>Display Products</h1>
+                <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label>
                 <asp:DataList ID="DataList1" runat="server" CellPadding="10" CellSpacing="10" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         <asp:Image ID="Image1" runat="server" Height="100" Width="100" ImageUrl='<%# Eval("prod_image") %>' />
@@ -23,7 +24,7 @@
                         <div style="display: flex margin:2px">
                             <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmd_view">View Details</asp:LinkButton>
 
-                            <asp:LinkButton ID="LinkButton2" runat="server">Add To Cart</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmd_add">Add To Cart</asp:LinkButton>
                         </div>
                     </ItemTemplate>
                 </asp:DataList>
