@@ -73,6 +73,7 @@
     <Content Include="App_Data\stud_info_db_log.ldf">
       <DependentUpon>stud_info_db.mdf</DependentUpon>
     </Content>
+    <Content Include="Cart.aspx" />
     <Content Include="Display_products.aspx" />
     <Content Include="LoginStudent.aspx" />
     <Content Include="View_Details.aspx" />
@@ -93,6 +94,13 @@
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Display_products.aspx.cs">
       <DependentUpon>Display_products.aspx</DependentUpon>
