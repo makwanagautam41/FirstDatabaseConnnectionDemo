@@ -106,6 +106,11 @@ namespace FirstDatabaseConnnectionDemo
 
         }
 
+        protected void view_cart_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cart.aspx");
+        }
+
         void fillDataList()
         {
             getConnection();

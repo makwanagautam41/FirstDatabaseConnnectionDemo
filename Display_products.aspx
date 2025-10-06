@@ -12,6 +12,7 @@
             <center>
                 <h1>Display Products</h1>
                 <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label>
+                <asp:Button ID="view_cart_btn" runat="server" Text="View Cart" OnClick="view_cart_btn_Click" />
                 <asp:DataList ID="DataList1" runat="server" CellPadding="10" CellSpacing="10" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         <asp:Image ID="Image1" runat="server" Height="100" Width="100" ImageUrl='<%# Eval("prod_image") %>' />
